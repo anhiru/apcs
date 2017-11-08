@@ -9,22 +9,19 @@
 
 import java.util.Scanner;
 
-public class Palindrome
-{
+public class Palindrome {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Type in a word! I'll check to see if it's a palindrome.");
         String str = in.next();
         str = str.toLowerCase();
-        boolean result = false;
+        boolean palindrome = true;
         for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == str.charAt(str.length() - 1 - i)) {
-                result = true;
-            } else {
-                result = false;
-                i = str.length();
+            if(str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+                palindrome = false;
+                break;
             }
         }
-        System.out.println(result);
+        System.out.println(palindrome);
     }
 }
