@@ -1,7 +1,7 @@
 
 /**
  * Palindrome PROGRAM
-   * A palindrome is a word in which the first letter is the same as the last, the second letter is the same as the second-to-last, and so on.
+   * A palindrome is a word in which the first letter is the same as the last, the second letter is the same as the second-to-last, etc.
    * Determines whether or not an inputted word is a palindrome. 
  * @author (AndrewTran)
  * @version (09/15/17)
