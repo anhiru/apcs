@@ -15,15 +15,15 @@ public class Factor {
             }
             //print its prime factors 
             System.out.print("Prime factors: ");
-            if(prime == false) {
+            if(prime) {
+                System.out.print(1 + " " + value);
+            } else {
                 for(long i = 2; i <= Math.sqrt(value); i++) {
                     while(value % i == 0) {    // if the value is divisible by index i
                         System.out.print(i + " ");
                         value /= i;
                     }
                 }
-            } else {
-                System.out.print(1 + " " + value);
             }
             System.out.println("");
             System.out.print("Continue? (Y/N) ");
