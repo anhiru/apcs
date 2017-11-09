@@ -18,7 +18,7 @@ public class OddOrEven {
                System.out.println("The number is odd.");
            }
            System.out.print("Continue? (Y/N) ");
-           String yn = in.nextLine().toLowerCase();
+           String yn = in.next().toLowerCase();
            if(yn.startsWith("n") {
                break;
            } 
