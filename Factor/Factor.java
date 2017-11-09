@@ -8,7 +8,7 @@ public class Factor {
             long value = Math.abs(in.nextLong());
             //check to see if the value is prime
             boolean prime = true;
-            for(int i = 2; i <= Math.sqrt(value); i++) {
+            for(long i = 2; i <= Math.sqrt(value); i++) {
                 if(value % i == 0) {
                     prime = false;
                 }
@@ -18,7 +18,7 @@ public class Factor {
             if(prime) {
                 System.out.print(1 + " " + value);
             } else {
-                for(long i = 2; i <= Math.sqrt(value); i++) {
+                for(long i = 2; i <= value; i++) {
                     while(value % i == 0) {    // if the value is divisible by index i
                         System.out.print(i + " ");
                         value /= i;
