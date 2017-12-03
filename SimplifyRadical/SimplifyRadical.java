@@ -26,16 +26,17 @@ public class SimplifyRadical {
 	            if(store == 0) {
 		        System.out.println("rt(0) simplifies to 0");
 		    } else if(outside == 1) {
-		        System.out.println("rt(" + store + ") cannot be simplified any further.");
+		        System.out.printf("rt(%d) cannot be simplified any further.%n", store);
 		    } else if(inside == 1) {
-	    	        System.out.println("rt(" + store + ") simplifies to " + outside);
+	    	        System.out.printf("rt(%d) simplifies to %d%n", store, outside);
 	            } else {
-		        System.out.println("rt(" + store + ") simplifies to " + outside + "*rt(" + inside + ")");
+		        System.out.printf("rt(%d) simplifies to %d*rt(%d)%n", store, outside, inside);
 		    }
-		    System.out.print("Continue? (Y/N) ");
-		    String yn = in.next().toLowerCase();
-		    if(yn.startsWith("n")) {
+		    System.out.printf("%nContinue? (Y/N) ");
+		    if(in.next().toLowerCase().startsWith("n")) {
 		        break;
+		    } else {
+			System.out.println();
 		    }
 	        }
             }
