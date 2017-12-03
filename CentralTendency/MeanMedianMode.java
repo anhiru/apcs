@@ -11,11 +11,13 @@ public class MeanMedianMode {
 		len = data.length;
 	}
 	public void print() {
-		System.out.println();
-		System.out.print("Your data set: "); //Print the data set for the user to visualize
+		System.out.printf("%nYour data set: "); //Print the data set for the user to visualize
 		for(int i = 0; i < len; i++) {
 			System.out.print(data[i] + "  ");
 		}
+	}
+	public void sort() {
+		Arrays.sort(data);
 	}
 	public double mean() {
 		double temp = 0;
@@ -25,8 +27,6 @@ public class MeanMedianMode {
 		return temp/len;
 	}
 	public void median() {
-		Arrays.sort(data);
-		System.out.println();
 		System.out.print("Median: ");
 		if(len % 2 == 0) {
 			System.out.printf("%.3f%n", (data[len/2-1]+data[len/2])/2);
@@ -36,7 +36,8 @@ public class MeanMedianMode {
 	}
 	public void mode() {
 		int count = 0;
-		for(int i = 0; i < len; i++) { //Find the number of most repetitions
+		//Find the number of most repetitions
+		for(int i = 0; i < len; i++) { 
 			int temp = 0;
 			for(int j = 0; j < len; j++) {
 				if(data[j] == data[i]) {
@@ -47,7 +48,7 @@ public class MeanMedianMode {
 				count = temp;
 			}
 		}	
-		System.out.println(); //If all numbers are unique, then there is no mode
+		//If all numbers are unique, then there is no mode
 		if(count == 1) {
 			System.out.println("There is no mode in this data set.");
 		} else {
@@ -71,26 +72,18 @@ public class MeanMedianMode {
 		for(int i = 0; i < len; i++) {
 			temp += Math.pow(i-mean(), 2);
 		}
-		System.out.printf("%nStandard deviation: %.3f%n", Math.pow(temp/len, 0.5));
+		System.out.printf("Standard deviation: %.3f%n", Math.pow(temp/len, 0.5));
 	}
 	public void midRange() {
-		Arrays.sort(data);
-		System.out.println();
 		System.out.println("Midrange: " + (data[len-1]+data[0])/2);
 	}
 	public void range() {
-		Arrays.sort(data);
-		System.out.println();
 		System.out.println("Range: " + (data[len-1]-data[0]));
 	}
 	public void maximum() {
-		Arrays.sort(data);
-		System.out.println();
 		System.out.println("Maxmimum: " + data[len-1]);
 	}
 	public void minimum() {
-		Arrays.sort(data);
-		System.out.println();
 		System.out.println("Minimum: " + data[0]);
 	}
 	public void randomNum() {
@@ -99,7 +92,6 @@ public class MeanMedianMode {
 			temp.add(data[i]);
 		}
 		Collections.shuffle(temp);
-		System.out.println();
 		System.out.println("Random #: " + temp.get(0));
 	}
 }
