@@ -15,6 +15,7 @@ public class CentralTendency {
 				}	
 				MeanMedianMode data = new MeanMedianMode(nums);
 				data.print();
+				data.sort();
 
 				boolean compute = true;
 				while(compute) {
