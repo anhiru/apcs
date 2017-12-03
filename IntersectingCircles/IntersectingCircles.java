@@ -11,14 +11,10 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class IntersectingCircles
-{
-    public static void main(String[] args)
-    {
+public class IntersectingCircles {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        boolean neg = true;
-        // System.out.println("RADII CHECK");
-        while(neg == true) {
+        while(true) {
             System.out.println("CIRCLE #1");
             System.out.print("Enter the radius: ");
             double aRadius = Math.abs(input.nextDouble());
@@ -40,7 +36,7 @@ public class IntersectingCircles
             double distY = Math.pow((bY - aY), 2);
             double distance = Math.sqrt(distX + distY);
                     
-            System.out.println(" ");
+            System.out.println();
             if(distance == 0 && aRadius == bRadius) {
                 System.out.println("The circles intersect infinitely many times.");
             } else if(abRadius < distance || aRadius - bRadius > distance || bRadius - aRadius > distance) {
@@ -52,14 +48,12 @@ public class IntersectingCircles
             }
                     
             System.out.print("Again? [0 for no] "); 
-            long repeat = input.nextLong();
+            int repeat = input.nextInt();
             if(repeat == 0) {
-                neg = false;
+                break;
             } else {
-                System.out.println(" ");
-                neg = true;
+                System.out.println();
             }
-
         }
     }
 }
