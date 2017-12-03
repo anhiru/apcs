@@ -30,9 +30,10 @@ public class CentralTendency {
 					System.out.println("[9] Random #");
 					System.out.println("[0] Quit");
 					int input = in.nextInt();
+					System.out.println();
 					switch(input) {
 						case 1:
-							System.out.printf("%nMean: %.3f%n", data.mean());
+							System.out.printf("Mean: %.3f%n", data.mean());
 							break;
 						case 2:
 							data.median();
@@ -62,7 +63,7 @@ public class CentralTendency {
 							compute = false;
 							break;
 						default:
-							System.out.printf("%nInvalid option. Try again.%n");
+							System.out.println("Invalid option. Try again.");
 							continue;
 					}
 				}
