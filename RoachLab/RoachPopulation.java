@@ -43,12 +43,6 @@ public class RoachPopulation {
 		population = 0;
 		System.out.println("R.I.P.");
 	}
-	public void reset() {
-		population = 100;
-		bMultiplier = 2;
-		sMultiplier = 0.9;
-		System.out.println("Experiment set to default conditions.");
-	}
 	public void print() {
 		System.out.printf("%nCurrent population: %d%n", getRoaches());
 	}
