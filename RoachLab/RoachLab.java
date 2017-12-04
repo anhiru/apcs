@@ -61,7 +61,8 @@ public class RoachLab {
 							}
 							break;
 						case 6:
-							test.reset();
+							test = new RoachPopulation(100);
+							System.out.println("Experiment set to default conditions.");
 							break;
 						case 7: 
 							testing = false;
