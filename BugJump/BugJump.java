@@ -11,19 +11,19 @@ public class BugJump {
 
 		while(run) {
 			user.print();
-			System.out.println("[1] Move");
+			System.out.println("[1] Jump!");
 			System.out.println("[2] Turn right");
 			System.out.println("[3] Turn left");
 			System.out.println("[4] Turn around");
-			System.out.println("[5] Increase jump");
-			System.out.println("[6] Decrease jump");
+			System.out.println("[5] Upgrade");
+			System.out.println("[6] Downgrade");
 			System.out.println("[7] RESET");
 			System.out.println("[8] QUIT");
 			int input = in.nextInt();
 			System.out.println();
 			switch(input) {
 				case 1:
-					user.move();
+					user.jump();
 					break;
 				case 2:
 					user.turnSide("right");
@@ -48,7 +48,7 @@ public class BugJump {
 					run = false;
 					break;
 				default:
-					System.out.println("Invalid option. Try again.");
+					System.out.printf("Invalid option. Try again.%n%n");
 					continue;
 			}
 		}
