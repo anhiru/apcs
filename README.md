@@ -1,2 +1,3 @@
-# APCS
+# APCS :computer:
+
 AP COMPUTER SCIENCE 2017-2018
