@@ -11,6 +11,20 @@ public class Bug {
 		up = false;
 		down = false;
 	}
+	public int[] getPosition() {
+		return position;
+	}
+	public void jump() {
+		if(right) {
+			position[0] += jump;
+		} else if(left) {
+			position[0] -= jump;
+		} else if(up) {
+			position[1] += jump;
+		} else {
+			position[1] -= jump;
+		}
+	}
 	public void turnAround() {
 		if(right) {
 			right = false;
@@ -58,30 +72,16 @@ public class Bug {
 			}
 		}
 	}
-	public void move() {
-		if(right) {
-			position[0] += jump;
-		} else if(left) {
-			position[0] -= jump;
-		} else if(up) {
-			position[1] += jump;
-		} else {
-			position[1] -= jump;
-		}
-	}
 	public void increaseJump(boolean yes) {
 		if(yes) {
 			jump++;
 		} else {
 			jump--;
-			if(jump < 0) {
-				jump = 0;
+			if(jump < 1) {
+				jump = 1;
 			}
 		}
 		System.out.printf("Jump distance is now %d.%n%n", jump);
-	}
-	public int[] getPosition() {
-		return position;
 	}
 	public void print() {
 		System.out.printf("Position: (%d, %d) ", position[0], position[1]);
