@@ -1,3 +1,3 @@
-# APCS :computer:
+# apcs :computer:
 
-AP COMPUTER SCIENCE 2017-2018
+ap computer science a, 2017–2018
