@@ -18,12 +18,13 @@ public class LeapYear {
             int year = in.nextInt();
             boolean leap_year = false;
           
-            // before 1582 we only care about if the year is divisible by 4 
+            // return true if year is a multiple of 4 and not a multiple of 100 
+            // OR if year is a multiple of 400
             if(year > 1582) {
-                if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+                if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
                     leap_year = true;
                 }
-            } else if(year % 4 == 0) {
+            } else if(year % 4 == 0) {  // before 1582 we only care about if the year is divisible by 4 
                 leap_year = true;
             }
           
